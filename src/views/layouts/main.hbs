@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda SolTec - Tienda SolTec</title>
+
+  <!--
+    - favicon
+  -->
+  <!-- <link rel="shortcut icon" href="/images/logo/favicon.ico" type="image/x-icon"> -->
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+
+  <!--
+    - HEADER
+  -->
+
+  <header>
+
+    <div class="header-top">
+
+      <div class="container">
+
+        <ul class="header-social-container">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+        <div class="header-alert-news">
+          <p>
+            <b>Si no encuentras lo que estas buscando, escríbenos para cotizarlo</b>
+          </p>
+        </div>
+
+        <div class="header-top-actions">
+
+          
+
+          </select>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="header-main">
+
+      <div class="container">
+
+        <a href="/" class="header-logo">
+          <img src="/images/logo/logo.png" alt="Soltec logo" width="150">
+        </a>
+
+        <div class="header-search-container">
+
+          <input type="search" name="search" class="search-field" placeholder="Ingresa el nombre de tu producto...">
+
+          <button class="search-btn">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+
+        </div>
+
+        
+           <div class="header-user-actions">
+          {{#if user}}
+      <nav class="desktop-navigation-menu">
+
+      <div class="container">
+
+        <ul class="desktop-menu-category-list">
+            <li class="menu-category">
+            <a href="" class="menu-title">
+            <button class="action-btn">
+            <ion-icon name="person-outline"></ion-icon>
+            <span class="count">{{user.nombre_us}}</span>
+            </button>
+            </a>
+
+            <div class="dropdown-panel-user">
+
+              <ul class="dropdown-panel-list">
+
+                <li class="panel-list-item-user">
+                  <a href="#">Cuenta</a>
+                </li>
+
+                <li class="panel-list-item-user">
+                  <a href="/sessionclose">Cerrar Session</a>
+                </li
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+
+    </nav>
+    {{else}}
+       
+          <a href="/cuenta/login">
+            <button class="action-btn">
+            <ion-icon name="person-outline"></ion-icon>
+            </button>
+            </a>
+          {{/if}}
+
+          <button class="action-btn">
+            <ion-icon name="heart-outline"></ion-icon>
+            <span class="count">0</span>
+          </button>
+
+          <button class="action-btn">
+            <ion-icon name="bag-handle-outline"></ion-icon>
+            <span class="count">0</span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <nav class="desktop-navigation-menu">
+
+      <div class="container">
+
+        <ul class="desktop-menu-category-list">
+
+          <li class="menu-category">
+            <a href="/" class="menu-title">Home</a>
+          </li>
+
+          <li class="menu-category">
+            <a href="" class="menu-title">Categorias</a>
+
+            <div class="dropdown-panel">
+
+              <ul class="dropdown-panel-list">
+
+                <li class="menu-title">
+                  <a href="#">Electronicos</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Escritorio</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Laptop</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Camara</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Tablet</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Audifonos</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="/images/banner-5.png" alt="headphone collection" width="250"
+                      height="119">
+                  </a>
+                </li>
+
+              </ul>
+
+              <ul class="dropdown-panel-list">
+
+                <li class="menu-title">
+                  <a href="#">Tecnología Empresas</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Biometricos</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Camaras</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">-</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">-</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">-</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="/images/banner-6.png" alt="men's fashion" width="250" height="119">
+                  </a>
+                </li>
+
+              </ul>
+
+              <ul class="dropdown-panel-list">
+
+                <li class="menu-title">
+                  <a href="#">Protege Tu Salud</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Productos Desinfectantes</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Caretas</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Cubrebocas</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">-</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">-</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="/images/banner-7.png" alt="women's fashion" width="250" height="119">
+                  </a>
+                </li>
+
+              </ul>
+
+              <ul class="dropdown-panel-list">
+
+                <li class="menu-title">
+                  <a href="#">Tecnología Hogar</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Equipo Escolar</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Videoportero</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Televisiones</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Electrodomesticos</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#"> -</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="/images/banner-8.png" alt="mouse collection" width="250" height="119">
+                  </a>
+                </li>
+
+              </ul>
+
+            </div>
+          </li>
+
+         
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">Blog</a>
+          </li>
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">Hot Offers</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </nav>
+</header>
+<body>
+
+  
+
+    {{{ body }}}
+
+    {{> messages}}
+    
+</body>
+ <footer>
+
+    
+
+    <div class="footer-nav">
+
+      <div class="container">
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Categorias Populares</h2>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Desktop</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Hardware</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Hardware</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Redes</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Electrónica</a>
+          </li>
+
+        </ul>
+
+       
+
+        <ul class="footer-nav-list">
+        
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Nuestra compañia</h2>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Lorem</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Lorem</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Lorem</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Lorem</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Lorem</a>
+          </li>
+        
+        </ul>
+
+        <ul class="footer-nav-list">
+        
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Servicios</h2>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Lorem</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Lorem</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Lorem</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Lorem</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Lorem</a>
+          </li>
+        
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Contactos</h2>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <address class="content">
+              5 de Octubre 12, Sta Maria Tonanitla, 55789 Santa María Tonanitla, Méx.
+            </address>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+
+            <a href="tel:+607936-8058" class="footer-nav-link">(777) 777-7777</a>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <a href="mailto:example@gmail.com" class="footer-nav-link">servicios@hermes.com</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Follow Us</h2>
+          </li>
+
+          <li>
+            <ul class="social-link">
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <img src="/images/payment.png" alt="payment method" class="payment-img">
+
+        <p class="copyright">
+          
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</html>

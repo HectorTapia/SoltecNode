@@ -1,0 +1,23 @@
+   {{#if warning}}
+     <section class="modal">
+        <div class="modal__container">
+            <img src="/images/modal-warning.png" class="modal__img">
+            <h2 class="modal__title">¡Verifica tu informacion!</h2>
+            <p class="modal__paragraph">{{warning}}</p>
+            <a href="" class="modal__close">Continuar</a>
+        </div>
+    </section>
+    {{/if}} 
+    
+    {{#if success}}
+     <section class="modal">
+        <div class="modal__container">
+            <img src="/images/modal-success.png" class="modal__img">
+            <h2 class="modal__title">¡Bienvenido al sitio!</h2>
+            <p class="modal__paragraph">{{success}}</p>
+            <a href="" class="modal__close">Continuar</a>
+        </div>
+    </section>
+    {{/if}}
+
+   

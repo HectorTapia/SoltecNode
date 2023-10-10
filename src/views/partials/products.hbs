@@ -1,0 +1,77 @@
+
+<body>
+
+  
+  <section>
+    <link rel="stylesheet" href="/css/style-products.css">
+    <div class="container_prod flex_prod">
+      <div class="left">
+        <div class="main_image">
+          <img class="img_prod" src="/images/products/p-i-1.jpg" id="ProductImg" class="slide" width="500" height="500">
+        </div>
+        <div class="option_prod flex_prod">
+          <img class="img_prod small-img" src="/images/products/p-i-1.jpg" onclick="img('/images/products/p-i-1.jpg')" width="500" height="500">
+          <img class="img_prod small-img" src="/images/products/p-i-2.jpg" onclick="img('/images/products/p-i-2.jpg')" width="500" height="500">
+          <img class="img_prod small-img" src="/images/products/p-i-3.jpg" onclick="img('/images/products/p-i-3.jpg')" width="500" height="500">
+          <img class="img_prod small-img" src="/images/products/p-i-4.jpg" onclick="img('/images/products/p-i-4.jpg')" width="500" height="500">
+          <img class="img_prod small-img" src="/images/products/p-i-5.jpg" onclick="img('/images/products/p-i-5.jpg')" width="500" height="500">
+          <img class="img_prod small-img" src="/images/products/p-i-6.jpg" onclick="img('/images/products/p-i-6.jpg')" width="500" height="500">
+        </div>
+      </div>
+      <div class="right">
+        <h3 class="h3_prod">Laptop Gamer ASUS TUF Dash F15 15.6"</h3>
+        <h4 class="h4_prod"> <small class="small_prod">$</small>28,047.64</h4>
+        <p class="p_prod">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <h5 class="h5_prod">Numero</h5>
+        <div class="add flex1_prod">
+          <span class="span_prodt">-</span>
+          <label class="label_prod">1</label>
+          <span class="span_prodt">+</span>
+        </div>
+
+        <button class="button_prod">Agregar al carrito</button>
+      </div>
+    </div>
+  </section>
+  <script>
+    function img(anything) {
+      document.querySelector('.slide').src = anything;
+    }
+
+    function change(change) {
+      const line = document.querySelector('.home');
+      line.style.background = change;
+    }
+
+    var ProductImg = document.getElementById("ProductImg");
+var SmallImg = document.getElementsByClassName("small-img");
+
+SmallImg[0].onclick = function(){
+    ProductImg.src = SmallImg[0].src;
+}
+
+SmallImg[1].onclick = function(){
+    ProductImg.src = SmallImg[1].src;
+}
+
+SmallImg[2].onclick = function(){
+    ProductImg.src = SmallImg[2].src;
+}
+
+SmallImg[3].onclick = function(){
+    ProductImg.src = SmallImg[3].src;
+}
+
+SmallImg[4].onclick = function(){
+    ProductImg.src = SmallImg[4].src;
+}
+
+SmallImg[5].onclick = function(){
+    ProductImg.src = SmallImg[5].src;
+}
+  </script>
+    
+
+    
+</body>
+ 

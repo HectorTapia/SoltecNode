@@ -1,0 +1,133 @@
+
+  
+  .container_prod{
+    max-width: 75%;
+    margin: auto;
+    height: 80vh;
+    margin-top: 2%;
+    background: white;
+    box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  .left, .right {
+    width: 50%;
+    padding: 30px;
+  }
+  
+  .flex_prod {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .flex1_prod {
+    display: flex;
+  }
+  
+  .main_image {
+    width: auto;
+    height: auto;
+  }
+  
+  .option_prod .img_prod {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+  }
+  
+  .right {
+    padding: 50px 100px 50px 50px;
+  }
+  
+  .h3_prod {
+    color: black;
+    margin: 20px 0 20px 0;
+    font-size: 25px;
+  }
+  
+  .h5_prod,
+  .p_prod,
+  .small_prod {
+    color: black;
+  }
+  
+  .h4_prod {
+    color: rgb(20, 20, 20);
+  }
+  
+  .p_prod {
+    margin: 20px 0 50px 0;
+    line-height: 25px;
+  }
+  
+  .h5_prod {
+    font-size: 15px;
+  }
+  
+
+  
+ 
+  
+  .add .span_prodt {
+    background: none;
+    border: 1px solid #fecc00;
+    color: black;
+    text-align: center;
+    line-height: 60px;
+  }
+  
+  .add .label_prod {
+    padding: 20px 10px 20px 10px;
+    border-radius: 50px;
+    line-height: 20px;
+  }
+  
+  .button_prod {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: #fecc00;
+    font-size: 25px;
+    color: white;
+    margin-top: 20%;
+    border-radius: 30px;
+  }
+  
+  @media only screen and (max-width:768px) {
+    .container_prod {
+      max-width: 90%;
+      margin: auto;
+      height: auto;
+    }
+  
+    .left, .right {
+      width: 100%;
+    }
+  
+    .container_prod {
+      flex-direction: column;
+    }
+  }
+  
+  @media only screen and (max-width:511px) {
+    .container_prod {
+      max-width: 100%;
+      height: auto;
+      padding: 10px;
+    }
+  
+    .left, .right {
+      padding: 0;
+    }
+  
+    .img_prod {
+      width: 100%;
+      height: 100%;
+    }
+  
+    .option_prod {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  
