@@ -23,43 +23,47 @@
                 <!--Formulario de Login y registro-->
                 <div class="contenedor__login-register">
                     <!--Login-->
-                    <form action="/cuenta/login" method="post" id="form" class="formulario__login">
-                    <div class="form-control ">
+                    <form action="/cuenta/login" method="post" class="formulario__login">
                         <h2>Iniciar Sesión</h2>
-                        <input type="text" id="nombre_com_us" placeholder="Nombre completo">
-                        <i class="fas fa-check-circle"></i>
-                        <i class="fas fa-exclamation-circle"></i>
-                        <small>Error message</small>
+                        <input type="text" name="email_us" placeholder="Correo Electronico">
                         <input type="password" name="password" placeholder="Contraseña">
-                        <button class="hero__cta">Entrar</button></div>
+                        <button class="hero__cta">Entrar</button>
                     </form>
 
                     <!--Register-->
-                    <form method="post" id="form" class="formulario__register hero__cta">
+                    <form action="/cuenta/logout" method="post" id="form" class="formulario__register hero__cta">
+                    <h2>Regístrarse</h2>
                     <div class="form-control ">
-                        <h2>Regístrarse</h2>
-                        <input type="text" id="nombre_com_us" placeholder="Nombre completo">
+                        <input type="text" id="nombre_com_us" name="nombre_com_us"  placeholder="Nombre completo">
                         <i class="fas fa-check-circle"></i>
                         <i class="fas fa-exclamation-circle"></i>
                         <small>Error message</small>
+                        </div>
+                        <div class="form-control ">
                         <input type="text" id="email_us" name="email_us" placeholder="Correo Electronico">
                         <i class="fas fa-check-circle"></i>
                         <i class="fas fa-exclamation-circle"></i>
                         <small>Error message</small>
+                        </div>
+                        <div class="form-control">
                         <input type="text" id="nombre_us" name="nombre_us" placeholder="Usuario">
                         <i class="fas fa-check-circle"></i>
                         <i class="fas fa-exclamation-circle"></i>
                         <small>Error message</small>
+                        </div>
+                        <div class="form-control">
                         <input type="password" id="password" name="password" placeholder="Contraseña">
                         <i class="fas fa-check-circle"></i>
                         <i class="fas fa-exclamation-circle"></i>
                         <small>Error message</small>
+                        </div>
+                        <div class="form-control">
                         <input type="password" id="passwor" name="passwor" placeholder="Contraseña">
                         <i class="fas fa-check-circle"></i>
                         <i class="fas fa-exclamation-circle"></i>
                         <small>Error message</small>
-            
-                        <button>Regístrarse</button></div>
+                        </div>
+                        <button class="hero__cta">Regístrarse</button></div>
                     </form>
                 </div>
             </div>

@@ -18,15 +18,15 @@ ALTER TABLE users
 
 CREATE TABLE products(
     id_pr INT(11) NOT NULL,
-    nombre_pr VARCHAR(20) NOT NULL,
-    description_pr VARCHAR(100) NOT NULL,
+    nombre_pr VARCHAR(50) NOT NULL,
+    description_pr VARCHAR(300) NOT NULL,
     price_pr VARCHAR(15) NOT NULL,
     price_ant_pr VARCHAR(15) NOT NULL,
     image_1_pr BLOB NOT NULL,
     image_2_pr BLOB NOT NULL,
     image_3_pr BLOB NOT NULL,
     image_4_pr BLOB NOT NULL,
-    created_at timestamp NOT NULL DEFAULT current_timestamp,
+    created_at timestamp NOT NULL DEFAULT current_timestamp
 );
 
 ALTER TABLE products

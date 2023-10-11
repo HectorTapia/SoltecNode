@@ -17,6 +17,7 @@ router.post('/logout',isNotLoggedIn, passport.authenticate('local.singup',{
     failureFlash: true
 }));
 
+
 router.post('/login',isNotLoggedIn, (req, res, next) =>{
     passport.authenticate('local.singin',{
     successRedirect: '/',

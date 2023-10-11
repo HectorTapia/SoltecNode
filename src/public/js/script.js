@@ -1,3 +1,6 @@
+
+
+
 //Ejecutando funciones
 document.getElementById("btn__iniciar-sesion").addEventListener("click", iniciarSesion);
 document.getElementById("btn__registrarse").addEventListener("click", register);
@@ -33,7 +36,7 @@ anchoPage();
     function iniciarSesion(){
         if (window.innerWidth > 850){
             formulario_login.style.display = "block";
-            contenedor_login_register.style.left = "10px";
+            contenedor_login_register.style.left = "90px";
             formulario_register.style.display = "none";
             caja_trasera_register.style.opacity = "1";
             caja_trasera_login.style.opacity = "0";
@@ -49,7 +52,7 @@ anchoPage();
     function register(){
         if (window.innerWidth > 850){
             formulario_register.style.display = "block";
-            contenedor_login_register.style.left = "410px";
+            contenedor_login_register.style.left = "510px";
             formulario_login.style.display = "none";
             caja_trasera_register.style.opacity = "0";
             caja_trasera_login.style.opacity = "1";
@@ -67,75 +70,101 @@ anchoPage();
 
 //Validacion de campos de formulario
 const form = document.getElementById('form');
-const nombre = document.getElementById('nom_com_us');
+const nombre = document.getElementById('nombre_com_us');
 const usuario = document.getElementById('nombre_us');
 const email = document.getElementById('email_us');
 const password = document.getElementById('password');
 const password2 = document.getElementById('passwor');
 
-form.addEventListener('submit', e => {
-	e.preventDefault();
-	
-	checkInputs();
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  let hasErrors = false;
+  hasErrors = checkInputs(usuario, 'No puede dejar el usuario en blanco') || hasErrors;
+  hasErrors = checkInputs(nombre, 'No puede dejar el nombre en blanco') || hasErrors;
+  hasErrors = checkInputs(email, 'No puede dejar el email en blanco') || hasErrors;
+  hasErrors = checkEmail(email) || hasErrors;
+  
+  hasErrors = checkInputs(password, 'La contraseña no debe estar en blanco') || hasErrors;
+  hasErrors = checkInputs(password2, 'La contraseña no debe estar en blanco') || hasErrors;
+  hasErrors = checkPasswordMatch(password, password2) || hasErrors;
+  // hasErrors = checkEmailBd(email) || hasErrors;
+
+  if (!hasErrors) {
+    form.submit();
+  }
 });
 
-function checkInputs() {
-	// trim to remove the whitespaces
-  const nombreValue = nombre.value.trim();
-	const usuarioValue = usuario.value.trim();
-	const emailValue = email.value.trim();
-	const passwordValue = password.value.trim();
-	const password2Value = password2.value.trim();
-	
-	if(usuarioValue === '') {
-		setErrorFor(usuario, 'Noi puede dejar el usuairo en blanco');
-	} else {
-		setSuccessFor(usuario);
-	}
+function checkInputs(input, message) {
+  const value = input.value.trim();
 
-  if(nombreValue === '') {
-		setErrorFor(nombre, 'Noi puede dejar el usuairo en blanco');
-	} else {
-		setSuccessFor(nombre);
-	}
-	
-	if(emailValue === '') {
-		setErrorFor(email, 'No puede dejar el email en blanco');
-	} else if (!isEmail(emailValue)) {
-		setErrorFor(email, 'No ingreso un email válido');
-	} else {
-		setSuccessFor(email);
-	}
-	
-	if(passwordValue === '') {
-		setErrorFor(password, 'Password no debe ingresar en blanco.');
-	} else {
-		setSuccessFor(password);
-	}
-	
-	if(password2Value === '') {
-		setErrorFor(password2, 'Password2 no debe ngresar en blanco');
-	} else if(passwordValue !== password2Value) {
-		setErrorFor(password2, 'Passwords no coinciden');
-	} else{
-		setSuccessFor(password2);
-	}
+  if (value === '') {
+    setErrorFor(input, message);
+    return true;
+  } else {
+    setSuccessFor(input);
+    return false;
+  }
 }
 
 function setErrorFor(input, message) {
-	const formControl = input.parentElement;
-	const small = formControl.querySelector('small');
-	formControl.className = 'form-control error';
-	small.innerText = message;
+  const formControl = input.parentElement;
+  const small = formControl.querySelector('small');
+  formControl.className = 'form-control error ';
+  small.innerText = message;
 }
 
 function setSuccessFor(input) {
-	const formControl = input.parentElement;
-	formControl.className = 'form-control success';
+  const formControl = input.parentElement;
+  formControl.className = 'form-control success';
+}
+
+function checkEmail(input) {
+  const emailValue = input.value.trim();
+  console.log(emailValue);
+  if (!isEmail(emailValue)) {
+    setErrorFor(input, 'No ingresó un email válido');
+    return true;
+  }else {
+    setSuccessFor(input);
+    return false;
+  }
+}
+
+// function checkEmail(input) {
+//   const pool = require('../database');
+//   const emailbdValue = input.value.trim();
+//   const rows = pool.query('SELECT * FROM users WHERE email_us = ?', [emailbdValue]);
+//   console.log(rows);
+//   console.log(emailbdValue);
+//     if (rows.length > 0) {
+//       setErrorFor(input, 'Ingresó un email ya registrado');
+//       return true;
+//      }else {
+//       setSuccessFor(input);
+//       return false;
+//     }
+  
+// }
+
+
+function checkPasswordMatch(password, password2) {
+  const passwordValue = password.value.trim();
+  const password2Value = password2.value.trim();
+  if(password2 === ""){
+    setErrorFor(input, message);
+  }
+  if (passwordValue !== password2Value) {
+    setErrorFor(password2, 'Las contraseñas no coinciden');
+    return true;
+  } else {
+    setSuccessFor(password2);
+    return false;
+  }
 }
 
 function isEmail(email) {
-	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
 
 
