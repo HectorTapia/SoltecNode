@@ -1,0 +1,29 @@
+<section class="modal">
+        <div class="modal__container">
+            <h2 class="modal__title">Editar Producto</h2>
+            <form id="formedit" action="/edit/" method="post">
+            <p class="modal__paragraph">
+                 <label for="">Nombre</label>
+                <input type="text" id="idValuenom" name="nombre_pr">
+                <label for="">Descripcion</label>
+                <input type="text" id="idValuedes" name="description_pr">
+                <label for="">Precio con descuento</label>
+                <input type="text" id="idValuepd" name="price_pr">
+                <label for="">Precio anterior</label>
+                <input type="text" id="idValuepa" name="price_ant_pr">
+                <label for="">Imagen1</label>
+                <input type="file" id="idValuea" name="image_1_pr" accept="image/*">
+                <label for="">Imagen2</label>
+                <input type="file" id="idValuea" name="image_2_pr" accept="image/*">
+                <label for="">Imagen3</label>
+                <input type="file" id="idValuea" name="image_3_pr" accept="image/*">
+                <label for="">Imagen4</label>
+                <input type="file" id="idValuea" name="image_4_pr" accept="image/*">
+                </p>
+            <button type="submit" style="border: none"><a class="modal__refresh">Modificar</a></button>
+            <a href="/admin" class="modal__close">Cerrar</a>
+            </form>
+        </div>
+    </section>
+
+    

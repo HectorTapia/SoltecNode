@@ -1,0 +1,113 @@
+<head>
+  <!-- ... otras etiquetas head ... -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://js.stripe.com/v3/"></script>
+  <link rel="stylesheet" href="/css/style.css">
+
+  
+</head>
+
+
+<script src="/js/card.js"></script>
+
+<div class="container-card">
+
+    <form id="payment-form" action="/save-token" method="post">
+
+        <div class="row" id="payment-form-stripe">
+
+            <div class="col">
+
+                <h3 class="title">Dirección de Envio</h3>
+
+                <div class="inputBox">
+                    <span>Nombre completo :</span>
+                    <input type="text" id="nombre" placeholder="john deo">
+                </div>
+                <div class="inputBox">
+                    <span>Correo :</span>
+                    <input type="email" id="correo" placeholder="example@example.com">
+                </div>
+                <div class="inputBox">
+                    <span>Direccion :</span>
+                    <input type="text" id="direccion" placeholder="">
+                </div>
+                <div class="inputBox">
+                    <span>Pais :</span>
+                    <input type="text" id="pais" placeholder="Mexico">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>Estado :</span>
+                        <input type="text" id="estado" placeholder="Ciudad de Mexico">
+                    </div>
+                    <div class="inputBox">
+                        <span>Codigo Postal :</span>
+                        <input type="text" id="codigoPostal" placeholder="123 456">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col">
+
+                <h3 class="title">Datos de tarjeta</h3>
+
+                <div class="inputBox">
+                    <span>Tarjetas acceptadas :</span>
+                    <img src="/images/logo/card_img.png" alt="">
+                </div>
+                <div class="inputBox">
+                    <span>Nombre en la tarjeta :</span>
+                    <input type="text" id="nombreTarjeta" placeholder="mr. john deo">
+                </div>
+                <div class="inputBox">
+                    <span>Numero de tarjeta :</span>
+                    <div id="card-element"></div>
+                </div>
+                <div class="inputBox">
+                    <span>EXP:</span>
+                    <div id="card-element-ex"></div>
+                </div>
+
+                <div class="flex">
+                    
+                    <div class="inputBox">
+                        <span>CVV :</span>
+                        <div id="card-element-cv"></div>
+                    </div>
+                </div>
+
+            </div>
+    <div id="payment-result" role="alert"></div>
+<button class="button_prod">Agregar tarjeta</button>
+        </div>
+
+  {{!-- <input type="text" id="amount" name="amount" placeholder="Monto del pago en centavos"> --}}
+  
+        
+    </form>
+
+</div>    
+    
+</body>
+
+
+    {{!-- <script>
+        // Función para recargar la página cada 5 segundos (5000 milisegundos)
+        function recargarPagina() {
+            location.reload();
+        }
+
+        // Establece la frecuencia de actualización en milisegundos (5 segundos en este caso)
+        var intervaloDeActualizacion = 10000;
+
+        // Configura un temporizador para llamar a la función de recarga cada cierto tiempo
+        setInterval(recargarPagina, intervaloDeActualizacion);
+    </script> --}}
+
+
+
+
+  

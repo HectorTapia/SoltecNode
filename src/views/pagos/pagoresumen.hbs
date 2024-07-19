@@ -1,0 +1,90 @@
+<body>
+    
+    
+{{>card}}
+  
+
+<section>
+    <div class="container-card-all">
+        <div class="row">
+            <div class="col">
+<div class="container-card-adress">
+  <form action="/pagof" method="post">
+        <div class="row" >
+
+            <div class="col">
+
+                <h3 class="title">Dirección de Envio</h3>
+                 <div class="inputBox">
+                    <span>Nombre:</span>
+                    <input name="nombreCompleto_pe" type="text" id="direccion" placeholder="mr. john deo">
+                </div>
+                 <div class="inputBox">
+                    <span>Correo Electronico:</span>
+                    <input name="correo_pe" type="email" id="correo" placeholder="example@example.com">
+                </div>
+                <div class="inputBox">
+                    <span>Direccion:</span>
+                    <input name="direccion_pe" type="text" id="direccion" placeholder="Nombre de calle">
+                </div>
+                <div class="inputBox">
+                    <span>Entre calle</span>
+                    <input name="calle_entre_pe" type="text" id="direccion" placeholder="Nombre de calle">
+                </div>
+                <div class="inputBox">
+                    <span>Y calle</span>
+                    <input name="entre_calle_pe" type="text" id="direccion" placeholder="Nombre de calle">
+                </div>
+                <div class="inputBox">
+                    <span>Colonia</span>
+                    <input name="colonia_pe" type="text" id="direccion" placeholder="Nombre de colonia">
+                </div>
+                <div class="flex">
+                <div class="inputBox">
+                    <span>No. Interior:</span>
+                    <input name="no_int_pe" type="text" id="estado" placeholder="MZ">
+                </div>
+                    <div class="inputBox">
+                        <span>No. Exterior:</span>
+                        <input name="no_ext_pe" type="text" id="estado" placeholder="LT">
+                    </div>
+                    <div class="inputBox">
+                        <span>Codigo Postal:</span>
+                        <input name="codigo_postal_pe" type="text" id="codigoPostal" placeholder="123 456">
+                    </div>
+                </div>
+                <div class="inputBox">
+                    <span>Referencia:</span>
+                    <input name="referencia_pe" type="text" id="direccion" placeholder="Color de puerta, Color de fachada...">
+                </div>
+                <div class="inputBox">
+                    <span>Numero Telefonico:</span>
+                    <input name="numero_telef_pe" type="text" id="direccion" placeholder="111-222-3333">
+                </div>
+        </div>   
+    </div>
+</div>
+            </div>
+            <div class="col">
+  <div class="site-footer-select-dress">
+        <div class="container-card-total">
+				<h2 class="subtotal">Subtotal: $<span>{{this.subtotal}}</span></h2>
+				<h3 class="shipping">Envio: $<span>100</span></h3>
+				<h1 class="total">Total: $<span>{{this.total}}</span></h1>
+				<button type="submit" class="btn pagaar-btn">Pagar</button>
+			</div>
+    </div>
+            </div>
+        </div>
+    </div>
+
+
+  
+			
+</section>
+
+  <script src="/js/cart-shop.js">
+  </script>
+
+</div>
+</body>

@@ -52,6 +52,9 @@ app.use((req, res, next) => {
 app.use(require('./routes'));
 app.use(require('./routes/cuenta'));
 app.use(require('./routes/producto'));
+app.use(require('./routes/admin'));
+app.use(require('./routes/admin-products')); 
+app.use(require('./routes/pago'));
 app.use('/cuenta' ,require('./routes/cuenta'));
 
 //Public

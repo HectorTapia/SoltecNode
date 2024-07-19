@@ -1,0 +1,64 @@
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<div class="container-cart">
+    <div class="col-70">{{#each car}}
+		<section id="cart"> 
+			<article class="product">
+				<header>
+					<a class="remove">
+						<img src="http://www.astudio.si/preview/blockedwp/wp-content/uploads/2012/08/5.jpg" alt="">
+						<a href="/quitar/{{id_carr}}"><h3>Eliminar Producto</h3></a>
+					</a>
+				</header>
+				<div class="content">
+					<h1>{{this.nombre_pr}}</h1>
+					{{this.descrip_pr}}
+				</div>
+				<footer class="content">
+					<span class="qt-minus">-</span>
+					<span class="qt">1</span>
+					<span class="qt-plus">+</span>
+					<h2 class="full-price">		
+					</h2>
+					<h2 class="price">
+						{{this.price}}
+					</h2>
+				</footer>
+			</article>
+		</section>
+
+	</div> 
+
+    <div class="col-30">
+<section id="site-footer">
+		<div class="container clearfix">
+
+			<div class="left-cart">
+				<h1 class="subtotal">Subtotal: $<span>{{this.price}}</span></h1>
+				{{!-- <h3 class="tax">Taxes (5%): <span>8.2</span>$</h3> --}}
+				{{!-- <h3 class="shipping">Envio: $<span>100</span></h3>
+				<h1 class="total">Total: $<span></span></h1> --}}
+				<a id="pagar-btn" href="/pagoform" class="btn">Pagar</a>
+			</div>{{/each}}
+
+		</div>
+</section>
+    </div>
+</div>
+
+   {{!-- <script>
+        // Función para recargar la página cada 5 segundos (5000 milisegundos)
+        function recargarPagina() {
+            location.reload();
+        }
+
+        // Establece la frecuencia de actualización en milisegundos (5 segundos en este caso)
+        var intervaloDeActualizacion = 30000000;
+
+        // Configura un temporizador para llamar a la función de recarga cada cierto tiempo
+        setInterval(recargarPagina, intervaloDeActualizacion);
+    </script> --}}
+
+    <script src="/js/cart-shop.js">
+	
+	</script>

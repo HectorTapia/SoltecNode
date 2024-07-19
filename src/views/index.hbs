@@ -12,7 +12,7 @@
 
           <div class="slider-item">
 
-            <img src="/images/banner-1.png" alt="women's latest fashion sale" class="banner-img">
+            <img src="/images/banner-1.png" class="banner-img">
 
             <div class="banner-content">
 
@@ -32,7 +32,7 @@
 
           <div class="slider-item">
 
-            <img src="/images/banner-2.png" alt="modern sunglasses" class="banner-img">
+            <img src="/images/banner-2.png" class="banner-img">
 
             <div class="banner-content">
 
@@ -52,7 +52,7 @@
 
           <div class="slider-item">
 
-            <img src="/images/banner-3.png" alt="new fashion summer sale" class="banner-img">
+            <img src="/images/banner-3.png" class="banner-img">
 
             <div class="banner-content">
 
@@ -114,7 +114,7 @@
                 <button class="sidebar-accordion-menu" data-accordion-btn>
 
                   <div class="menu-title-flex">
-                    <img src="/images/icons/dyl.png" alt="clothes" width="20" height="20"
+                    <img src="/images/icons/dyl.png" width="20" height="20"
                       class="menu-title-img">
 
                     <p class="menu-title">Desktop y Portátiles</p>
@@ -166,7 +166,7 @@
                 <button class="sidebar-accordion-menu data-accordion-btn" >
 
                   <div class="menu-title-flex">
-                    <img src="/images/icons/hardware.png" alt="footwear" class="menu-title-img" width="20"
+                    <img src="/images/icons/hardware.png"  class="menu-title-img" width="20"
                       height="20">
 
                     <p class="menu-title">Cómputo y Hardware</p>
@@ -218,7 +218,7 @@
                 <button class="sidebar-accordion-menu" data-accordion-btn>
 
                   <div class="menu-title-flex">
-                    <img src="/images/icons/impresora.png" alt="clothes" class="menu-title-img" width="20"
+                    <img src="/images/icons/impresora.png" class="menu-title-img" width="20"
                       height="20">
 
                     <p class="menu-title">Impresión y Consumibles</p>
@@ -263,7 +263,7 @@
                 <button class="sidebar-accordion-menu" data-accordion-btn>
 
                   <div class="menu-title-flex">
-                    <img src="/images/icons/dispositivos.png" alt="perfume" class="menu-title-img" width="20"
+                    <img src="/images/icons/dispositivos.png" class="menu-title-img" width="20"
                       height="20">
 
                     <p class="menu-title">Electrónica de Consumo</p>
@@ -315,7 +315,7 @@
                 <button class="sidebar-accordion-menu" data-accordion-btn>
 
                   <div class="menu-title-flex">
-                    <img src="/images/icons/medios.png" alt="cosmetics" class="menu-title-img" width="20"
+                    <img src="/images/icons/medios.png" class="menu-title-img" width="20"
                       height="20">
 
                     <p class="menu-title">Redes</p>
@@ -367,7 +367,7 @@
                 <button class="sidebar-accordion-menu" data-accordion-btn>
 
                   <div class="menu-title-flex">
-                    <img src="/images/icons/memoria-usb.png" alt="glasses" class="menu-title-img" width="20"
+                    <img src="/images/icons/memoria-usb.png" class="menu-title-img" width="20"
                       height="20">
 
                     <p class="menu-title">Almacenamiento de Datos</p>
@@ -405,7 +405,7 @@
                 <button class="sidebar-accordion-menu" data-accordion-btn>
 
                   <div class="menu-title-flex">
-                    <img src="/images/icons/telecomunicaciones.png" alt="bags" class="menu-title-img" width="20" height="20">
+                    <img src="/images/icons/telecomunicaciones.png" class="menu-title-img" width="20" height="20">
 
                     <p class="menu-title">Telecomunicación</p>
                   </div>
@@ -466,7 +466,7 @@
                 <div class="showcase">
 
                   <a href="#" class="showcase-img-box">
-                    <img src="/images/product-8.png" alt="baby fabric shoes" width="75" height="75"
+                    <img src="/images/product-8.png" width="75" height="75"
                       class="showcase-img">
                   </a>
 
@@ -496,7 +496,7 @@
                 <div class="showcase">
 
                   <a href="#" class="showcase-img-box">
-                    <img src="/images/product-3.png" alt="men's hoodies t-shirt" class="showcase-img"
+                    <img src="/images/product-3.png" class="showcase-img"
                       width="75" height="75">
                   </a>
 
@@ -525,7 +525,7 @@
                 <div class="showcase">
 
                   <a href="#" class="showcase-img-box">
-                    <img src="/images/product-6.png" alt="girls t-shirt" class="showcase-img" width="75"
+                    <img src="/images/product-6.png" class="showcase-img" width="75"
                       height="75">
                   </a>
 
@@ -554,7 +554,7 @@
                 <div class="showcase">
 
                   <a href="#" class="showcase-img-box">
-                    <img src="/images/products/antiv.jpg" alt="woolen hat for men" class="showcase-img" width="75"
+                    <img src="/images/products/antiv.jpg"  class="showcase-img" width="75"
                       height="75">
                   </a>
 
@@ -605,7 +605,7 @@
   
                   <figure class="card-banner">
                     <img src="/images/product/pcc.png" width="312" height="350" loading="lazy"
-                      alt="Running Sneaker Shoes" class="image-contain">
+                     class="image-contain">
   
                     <div class="card-badge">New</div>
   
@@ -657,13 +657,14 @@
   
                 </div>
               </li>
-  
+  {{#each products}}
               <li class="product-item">
                 <div class="product-card" tabindex="0">
   
                   <figure class="card-banner">
+                    {{!-- <img src="data:image/jpg;base64,{{image_2_pr}}" class="image-contain"> --}}
                     <img src="/images/product-2.png" width="312" height="350" loading="lazy"
-                      alt="Leather Mens Slipper" class="image-contain">
+                      class="image-contain">
   
                     <ul class="card-action-list">
   
@@ -684,7 +685,7 @@
                       </li>
   
                       <li class="card-action-item">
-                        <a href="/producto" class="card-action-btn" aria-labelledby="card-label-3">
+                        <a href="/producto/{{this.id_pr}}" class="card-action-btn" aria-labelledby="card-label-3">
                           <ion-icon name="eye-outline"></ion-icon>
                         </a>
   
@@ -698,28 +699,29 @@
   
                     </ul>
                   </figure>
-  
+ 
                   <div class="card-content">
   
                    
-  
-                    <h3 class="h3 card-title">
-                      <a href="#">Laptop Gamer ASUS TUF Dash F15 15.6"</a>
+                    
+                    <h3 class="h3 card-title"> 
+                      <a href="#">{{this.nombre_pr}}</a>
+              
                     </h3>
   
-                    <data class="card-price" value="190.85">$28,047.64</data>
+                    <data class="card-price" value="190.85">{{this.price_pr}}</data>
   
                   </div>
   
                 </div>
               </li>
-  
+  {{/each}}
               <li class="product-item">
                 <div class="product-card" tabindex="0">
   
                   <figure class="card-banner">
                     <img src="/images/product-3.png" width="312" height="350" loading="lazy"
-                      alt="Simple Fabric Shoe" class="image-contain">
+                     class="image-contain">
   
                     <div class="card-badge">New</div>
   
@@ -759,7 +761,6 @@
   
                   <div class="card-content">
   
-                
   
                     <h3 class="h3 card-title">
                       <a href="#">Smartphone Xiaomi Redmi 10 6.5"</a>
@@ -777,7 +778,7 @@
   
                   <figure class="card-banner">
                     <img src="/images/product-4.png" width="312" height="350" loading="lazy"
-                      alt="Air Jordan 7 Retro " class="image-contain">
+                     class="image-contain">
   
                     <div class="card-badge"> -25%</div>
   
@@ -835,7 +836,7 @@
   
                   <figure class="card-banner">
                     <img src="/images/product-5.png" width="312" height="350" loading="lazy"
-                      alt="Nike Air Max 270 SE" class="image-contain">
+                      class="image-contain">
   
                     <div class="card-badge">New</div>
   
@@ -893,7 +894,7 @@
   
                   <figure class="card-banner">
                     <img src="/images/product-6.png" width="312" height="350" loading="lazy"
-                      alt="Adidas Sneakers Shoes" class="image-contain">
+                      class="image-contain">
   
                     <ul class="card-action-list">
   
@@ -949,7 +950,7 @@
   
                   <figure class="card-banner">
                     <img src="/images/product-7.png" width="312" height="350" loading="lazy"
-                      alt="Nike Basketball shoes" class="image-contain">
+                     class="image-contain">
   
                     <ul class="card-action-list">
   
@@ -1005,7 +1006,7 @@
   
                   <figure class="card-banner">
                     <img src="/images/product-8.png" width="312" height="350" loading="lazy"
-                      alt="Simple Fabric Shoe" class="image-contain">
+                      class="image-contain">
   
                     <ul class="card-action-list">
   
@@ -1077,7 +1078,7 @@
                 <div class="showcase">
                   
                   <div class="showcase-banner">
-                    <img src="/images/products/pc.jpg" alt="shampoo, conditioner & facewash packs" class="showcase-img">
+                    <img src="/images/products/pc.jpg" class="showcase-img">
                   </div>
 
                   <div class="showcase-content">
@@ -1120,7 +1121,7 @@
                       <div class="showcase-status-bar"></div>
                     </div>
 
-                    <div class="countdown-box">
+                    {{!-- <div class="countdown-box">
 
                       <p class="countdown-desc">
                         ¡Apresúrate! La oferta termina en:
@@ -1153,7 +1154,7 @@
 
                       </div>
 
-                    </div>
+                    </div> --}}
 
                   </div>
 
@@ -1166,7 +1167,7 @@
                 <div class="showcase">
               
                   <div class="showcase-banner">
-                    <img src="/images/products/antiv.jpg" alt="Rose Gold diamonds Earring" class="showcase-img">
+                    <img src="/images/products/antiv.jpg" class="showcase-img">
                   </div>
               
                   <div class="showcase-content">
@@ -1205,7 +1206,7 @@
                       <div class="showcase-status-bar"></div>
                     </div>
               
-                    <div class="countdown-box">
+                    {{!-- <div class="countdown-box">
               
                       <p class="countdown-desc">¡Apresúrate! La oferta termina en:</p>
               
@@ -1231,7 +1232,7 @@
                         </div>
                       </div>
               
-                    </div>
+                    </div> --}}
               
                   </div>
               
@@ -1270,7 +1271,7 @@
                   <div class="services-card">
     
                     <div class="card-icon">
-                      <img src="/images/service-1.png" width="53" height="28" loading="lazy" alt="Services icon">
+                      <img src="/images/service-1.png" width="53" height="28" loading="lazy">
                     </div>
     
                     <div>
@@ -1288,7 +1289,7 @@
                   <div class="services-card">
     
                     <div class="card-icon">
-                      <img src="/images/service-2.png" width="48" height="35" loading="lazy" alt="Services icon">
+                      <img src="/images/service-2.png" width="48" height="35" loading="lazy">
                     </div>
     
                     <div>
@@ -1306,7 +1307,7 @@
                   <div class="services-card">
     
                     <div class="card-icon">
-                      <img src="/images/service-3.png" width="40" height="40" loading="lazy" alt="Services icon">
+                      <img src="/images/service-3.png" width="40" height="40" loading="lazy">
                     </div>
     
                     <div>
@@ -1324,7 +1325,7 @@
                   <div class="services-card">
     
                     <div class="card-icon">
-                      <img src="/images/service-4.png" width="40" height="40" loading="lazy" alt="Services icon">
+                      <img src="/images/service-4.png" width="40" height="40" loading="lazy">
                     </div>
     
                     <div>
